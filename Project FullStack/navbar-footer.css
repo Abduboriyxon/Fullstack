@@ -1,0 +1,496 @@
+/* Navbar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Promo Bar Styles */
+  .promo-bar {
+    background-color: #d67d45;
+    color: white;
+    padding: 10px 0;
+  }
+  
+  .promo-bar .container {
+    justify-content: space-between;
+  }
+  
+  .promo-actions {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .currency-selector, 
+  .language-selector {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .currency-selector i, 
+  .language-selector i {
+    margin-left: 5px;
+  }
+  
+  .language-selector img {
+    margin-right: 5px;
+  }
+  
+  /* Header Styles */
+  .main-header {
+    background-color: white;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  /* .main-header .container {
+    justify-content: space-between;
+  } */
+  
+  /* Logo */
+  .logo a {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2e5e2e;
+    letter-spacing: 1px;
+  }
+  
+  /* Main Navigation */
+  .main-nav ul {
+    display: flex;
+    gap: 25px;
+  }
+  
+  .main-nav ul li {
+    position: relative;
+  }
+  
+  .main-nav ul li a {
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+  }
+  
+  .main-nav ul li a i {
+    margin-left: 5px;
+  }
+  
+  /* Dropdown Styles */
+  .has-dropdown {
+    position: relative;
+
+  }
+  
+  .mega-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background-color: white;
+    border: 1px solid #eee;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+  }
+  
+  .has-dropdown:hover .mega-dropdown {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .dropdown-content {
+    display: flex;
+    padding: 20px;
+  }
+  
+  .dropdown-section {
+    flex: 1;
+    padding: 0 15px;
+  }
+  
+  .dropdown-section h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+  }
+  
+  .dropdown-section ul li {
+    padding: 5px 0;
+  }
+  
+  .dropdown-section ul li a:hover {
+    color: #d67d45;
+  }
+
+  .category2-nav{
+    display: flex;
+    /* flex-direction: column; */
+    gap: 10px;
+  }
+
+  .pp{
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Add these styles to your existing CSS */
+
+/* Updated Dropdown Styles for vertical lists */
+.category-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.category-header {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.vertical-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.vertical-list li {
+  margin: 0;
+  padding: 0;
+}
+
+.vertical-list li a {
+  display: block;
+  color: #444;
+  transition: color 0.2s;
+  font-size: 14px;
+}
+
+.vertical-list li a:hover {
+  color: #d67d45;
+}
+
+/* If you want to adjust the mega dropdown layout */
+.mega-dropdown {
+  width: fit-content; /* Adjust width as needed */
+  padding: 0px 20px;
+}
+
+.dropdown-content {
+  display: flex;
+  gap: 30px;
+}
+
+.dropdown-section {
+  flex: 1;
+}
+  
+  /* Promo Cards */
+  .promo-section {
+    flex: 1.5;
+  }
+  
+  .promo-card {
+    /* background-color: #f8f8f8; */
+    border-radius: 5px;
+    padding: 15px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #mn{
+    background-color: rgb(239, 232, 232);
+  }
+  #mn2{
+    background-color: rgb(232, 234, 240);
+  }
+  #mn3{
+    background-color: rgb(241, 238, 230);
+  }
+  #mn4{
+    background-color: rgb(239, 228, 238);
+  }
+  .promo-tag, .sale-tag {
+    display: inline-block;
+    background-color: #fff;
+    padding: 3px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-radius: 3px;
+  }
+  
+  .promo-card h3 {
+    font-size: 18px;
+    border: none;
+    margin-bottom: 5px;
+  }
+  
+  .promo-card p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .promo-card img {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    max-width: 150px;
+    max-height: 150px;
+  }
+  
+  
+  /* Header Actions */
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .action-button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+  }
+  
+  .count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #f3b233;
+    color: white;
+    font-size: 10px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Search Dropdown */
+  .search-container, .account-container, .cart-container {
+    position: relative;
+  }
+  
+  .search-dropdown, .account-dropdown, .cart-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 300px;
+    background-color: white;
+    border: 1px solid #eee;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    z-index: 100;
+    padding: 15px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+  }
+  
+  .search-dropdown.active, .account-dropdown.active, .cart-dropdown.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Account Dropdown */
+  .account-dropdown {
+    width: 200px;
+  }
+  
+  .account-dropdown ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #f5f5f5;
+  }
+  
+  .account-dropdown ul li:last-child {
+    border-bottom: none;
+  }
+  
+  /* Cart Dropdown */
+  .cart-dropdown {
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Search Bar */
+  .search-dropdown {
+    width: 100%;
+    max-width: 600px;
+    padding: 0;
+  }
+  
+  .search-bar {
+    display: flex;
+    width: 100%;
+    background-color: #f5f5f5;
+  }
+  
+  .search-bar input {
+    flex: 1;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+  
+  .search-button {
+    background-color: #f3b233;
+    color: #333;
+    border: none;
+    padding: 0 15px;
+    cursor: pointer;
+  }
+  
+  /* Expanded Search from Search Toggle */
+  #search-dropdown.active {
+    display: block;
+    position: fixed;
+    top: auto;
+    left: 0;
+    width: 100%;
+    background-color: #f5f5f5;
+    z-index: 200;
+  }
+  
+  #search-dropdown.active .search-bar {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+  }
+
+
+
+/* FOOTER STYLES */
+.site-footer {
+    background-color: #F5ECE0; /* Orqa fon rangi (xohlaganingizcha o‘zgartiring) */
+    color: #333;
+    padding: 50px 20px 20px 20px;
+    font-size: 14px;
+}
+
+/* Yuqori qism (4 ustun) */
+.footer-top {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-col h3 {
+    color: #2E4A21;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.footer-col p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col li {
+    margin-bottom: 8px;
+}
+
+.footer-col a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-col a:hover {
+    color: #E67E22;
+}
+
+/* Newsletter ustuni */
+.newsletter {
+    max-width: 300px; /* Juda keng bo‘lib ketmasligi uchun */
+}
+
+.subscribe-form {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.subscribe-form input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-right: none;
+    outline: none;
+}
+
+.subscribe-form button {
+    background-color: #FCD600;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+/* Ijtimoiy tarmoq ikonkalari (ixtiyoriy) */
+.footer-social a {
+    margin-right: 10px;
+}
+
+.footer-social img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Pastki qism (Powered by...) */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.payment-icons img {
+    width: 40px;
+    height: auto;
+    margin-left: 10px;
+} 
